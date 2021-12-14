@@ -36,9 +36,6 @@ void Hive::gooBee(Hive *h, int i) {
             mtx.lock();
             h->bees--;
             std::cout << "Bee " << i << " flew away" << '\n';
-            std::cout << "Bee " << i << " took honey" << '\n';
-            std::cout << "Bee " << i << " collected honey" << '\n';
-            std::cout << "Bee " << i << " started go home" << '\n';
             mtx.unlock();
             std::this_thread::sleep_for(std::chrono::milliseconds(h->bees_gather_time));
             mtx.lock();

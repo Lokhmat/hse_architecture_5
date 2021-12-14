@@ -17,13 +17,19 @@ int main(int argc, char *argv[]) {
     if (strcmp(argv[1], "-n") && strcmp(argv[1], "-r")){
         std::cout << "Proper start line: ./task5 -n {num of bees} {bees sleep time} {bees gathering time} {bear sleep time}" << std::endl;
         std::cout << "Or: ./task5 -r" << std::endl;
-        return 3;
+        return 2;
     }
+    char *p1,*p2,*p3,*p4;
     if(argc == 6) {
-        n = atoi(argv[2]);
-        bees_sleep_time = atoi(argv[3]);
-        bees_gather_time = atoi(argv[4]);
-        bear_sleep_time = atoi(argv[5]);
+        n = strtol(argv[2], &p1, 10);
+        bees_sleep_time = strtol(argv[3], &p2, 10);
+        bees_gather_time = strtol(argv[4], &p3, 10);
+        bear_sleep_time = strtol(argv[5], &p4, 10);
+        if(*p1 || *p2 || *p3 || *p4){
+            std::cout << "Proper start line: ./task5 -n {num of bees} {bees sleep time} {bees gathering time} {bear sleep time}" << std::endl;
+            std::cout << "Or: ./task5 -r" << std::endl;
+            return 3;
+        }
     } else{
         n = rand() % 100 + 3;
         bees_sleep_time = rand() % 100 + 20;
