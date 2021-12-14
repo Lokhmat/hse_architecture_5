@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/lohmat/Desktop/hse_architecture/task5/hive.cpp
+hive.h
+/Users/lohmat/Desktop/hse_architecture/task5/hive.h
+
+/Users/lohmat/Desktop/hse_architecture/task5/hive.h
+thread
+-
+mutex
+-
+chrono
+-
+iostream
+-
+atomic
+-
+
+/Users/lohmat/Desktop/hse_architecture/task5/main.cpp
+iostream
+-
+hive.h
+/Users/lohmat/Desktop/hse_architecture/task5/hive.h
+vector
+-
+cstdlib
+-
+ctime
+-
+
